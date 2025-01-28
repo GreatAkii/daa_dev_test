@@ -1,0 +1,35 @@
+{
+  "name": "dev_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "tsc -w",
+    "serve": "nodemon dist/index.js",
+    "start": "concurrently \"npm run watch\" \"npm run serve\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "",
+  "dependencies": {
+    "async-mutex": "^0.5.0",
+    "express": "^4.21.2",
+    "http-status-codes": "^2.3.0",
+    "joi": "^17.13.3",
+    "nanoid": "^5.0.9"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/http-status-codes": "^1.2.0",
+    "@types/jest": "^29.5.14",
+    "@types/joi": "^17.2.2",
+    "@types/nanoid": "^2.1.0",
+    "@types/node": "^22.10.10",
+    "concurrently": "^9.1.2",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.7.3"
+  }
+}
