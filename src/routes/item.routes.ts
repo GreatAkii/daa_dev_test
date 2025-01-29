@@ -1,10 +1,10 @@
 import express, { Router, Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
 
-import ItemController from "../controllers/item.controller.js";
+import ItemController from "../controllers/item.controller";
 
 const ItemRouter = Router();
-ItemRouter.use(express.json())
+ItemRouter.use(express.json());
 const itemController = new ItemController();
 
 // Create item
@@ -14,11 +14,11 @@ ItemRouter.post("/", itemController.addItem);
 ItemRouter.get("/", itemController.getItems);
 
 // Get item by id
-ItemRouter.get("/:id", itemController.getItemById); 
+ItemRouter.get("/:id", itemController.getItemById);
 
 // Delete item by id
 ItemRouter.delete("/:id", itemController.deleteItem);
 
-// Update item details by id 
+// Update item details by id
 ItemRouter.patch("/:id", itemController.updateItem);
-export default ItemRouter   
+export default ItemRouter;
