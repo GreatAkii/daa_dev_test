@@ -37,7 +37,8 @@
 
 - [x] Endpoint to update an item details by id [PATCH] [http://localhost:8000/api/items/:id](http://localhost:8000/api/items/:id)
 - [x] Endpoint to get item by id [GET] [http://localhost:8000/api/items/:id](http://localhost:8000/api/items/:id)
-- [ ] Unit tests - Coudn't complete due to issue with jest and typescript. Need to look into module not found error from jest suite.
+- [x] Unit tests for services
+- [x] Integration tests for api endpoints
 
 ## Commands
 
