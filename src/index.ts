@@ -7,6 +7,8 @@ app.use(express.json());
 app.use("/api/items", ItemRouter);
 
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+export default server;
