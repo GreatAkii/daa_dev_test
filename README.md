@@ -45,3 +45,5 @@
 `npm install` - Install dependencies
 
 `npm run start` - Start development server
+
+`npm run test` - Run tests
