@@ -1,5 +1,6 @@
 import { Mutex } from "async-mutex";
 import { Item, CreateItem, UpdateItem } from "../models/item";
+import { v4 as uuidv4 } from "uuid";
 
 class ItemService {
   private static instance: ItemService;
@@ -30,8 +31,8 @@ class ItemService {
       if (isDuplicate) {
         throw new Error("Item already exists");
       }
-      const { nanoid } = await import("nanoid"); //Dynamic import
-      const new_item = { ...item, id: nanoid(4) };
+
+      const new_item = { ...item, id: uuidv4().substring(0, 4) };
       this.items = [...this.items, { ...new_item }];
       return new_item;
     } finally {
