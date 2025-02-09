@@ -66,7 +66,7 @@ class ItemController {
       res.status(StatusCodes.OK).json({ deletedItem: deletedItem });
     } catch (error) {
       if (error instanceof Error) {
-        res.status(StatusCodes.BAD_REQUEST).json({ error: error.message });
+        res.status(StatusCodes.NOT_FOUND).json({ error: error.message });
       } else {
         res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ error: error });
       }
